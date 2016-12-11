@@ -1,0 +1,48 @@
+BUHAIANU RAZVAN - 313CC
+=2048= ncurses+C
+Tema 2 Programarea Calculatoarelor
+
+Programul incepe prin afisarea unei sgile pentru un interval de 5 secunde, urmand ca dupa acestea sa apara meniul jocului. Meniul contine 4 optiuni: New Game, Resume Game, Highscore si quit. Optiuni pe care le voi explica in cadrul acestui README
+In cadrul meniului se vor folosi(conform cerintei) sagetile, pentru navigare ,existand posibilitatea iesirii din aplicatie prin apasarea taste q.
+
+Optiunea New Game:
+Schimba ecranul, realizand interfata grafica ce contine tabla de joc(are in 2 pozitii aleatoare 2 sau 4), scorul (care va fi actualizat pe tot parcursul jocului), ora si data, legenda tastelor :
+	W,A,S,D -> pentru mutarile pe tabla de joc;
+	Q -> pentru iesire din joc si salvarea starii actuale a tablei accesibila prin Resume Game;
+	U -> Tasta Undo , pentru a merge inapoi cu o mutare;
+	x -> Tasta Auto-move , realizeaza o mutare ce elibereaza numarul maxim de casute din tabla de joc si obtine scorul cel mai mare;
+In cazul in care utilizatorul nu apasa nici o tasta timp de 6 secunde jocul va efectua Auto-Move;
+Jocul se termina in momentul:
+	A) In care nu mai exista mutari valide , aparand un mesaj corespunzator pe ecran pentru 3 secunde apoi va aparea fereastra highscore in care va fi adaugat scorul(daca nu sunt altele 10 mai mari decat acesta) si il va marca pentru utilizator;
+	B) in care apare o casuta 2048 pe tabla de joc(va ramane tabla afisata timp de 2 secunde), aparand pe ecran un mesaj corespunzator, apoi a aparea fereastra highscore in care va fi adaugat scorul(daca nu sunt altele 10 mai mari decat acesta) si il va marca pentru utilizator;
+	c) In cazul apasarii tastei 'q', jocul salvand tabla actuala ce va fi accesibila prin Resume Game;
+
+Optiunea Resume Game:
+Apare inca de la prima rulare a programului, pentru a putea continua jocul chiar in cazul in care executabilul a fost inchis(ultima tabla de joc ramane salvata)
+Schimba ecranul, realizand interfata grafica ce contine tabla de joc(salvata anterior),scorul (care va fi actualizat pe tot parcursul jocului), ora si data, legenda tastelor :
+	W,A,S,D -> pentru mutarile pe tabla de joc;
+	Q -> pentru iesire din joc si salvarea starii actuale a tablei accesibila prin Resume Game;
+	U -> Tasta Undo , pentru a merge inapoi cu o mutare;
+	x -> Tasta Auto-move , realizeaza o mutare ce elibereaza numarul maxim de casute din tabla de joc si obtine scorul cel mai mare;
+In cazul in care utilizatorul nu apasa nici o tasta timp de 6 secunde jocul va efectua Auto-Move;
+Jocul se termina in momentul:
+	A) In care nu mai exista mutari valide , aparand un mesaj corespunzator pe ecran pentru 3 secunde apoi va aparea fereastra highscore in care va fi adaugat scorul(daca nu sunt altele 10 mai mari decat acesta) si il va marca pentru utilizator;
+	B) in care apare o casuta 2048 pe tabla de joc(va ramane tabla afisata timp de 2 secunde), aparand pe ecran un mesaj corespunzator, apoi a aparea fereastra highscore in care va fi adaugat scorul(daca nu sunt altele 10 mai mari decat acesta) si il va marca pentru utilizator;
+	c) In cazul apasarii tastei 'q', jocul salvand tabla actuala ce va fi accesibila prin Resume Game;
+
+Optiunea Highscore:
+Schimba ecranul, realizand o lista cu maxim 10 cele mai bune scoruri obtinute pe parcursul acestui joc;
+Iese din ecranul HighScore in momentul apasarii tastei 'q';
+
+Optiunea Quit:
+Iese din joc, inchizand executabilul.
+
+Pe parcursul jocului se va observa realizarea unei interfete grafice minimaliste(color), implementata prin intermediul ncurses
+
+Bonusurile implementate sunt: 
+	Buton Undo;
+	Meniu Highscore
+	Folosirea culorilor;
+	Crearea unei Sigle;
+	Folosirea ASCII ART;
+	
