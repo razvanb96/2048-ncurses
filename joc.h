@@ -66,12 +66,9 @@ int new_game()
 				}
 			matant[i][j]=mat[i][j];
 		}
-	time_t t;
-	time(&t);
 	/************************************************
 	Printing the rest of the GUI With the Legend of moves
 	************************************************/
-	mvprintw (nrows-3,cm-15,"%s",ctime(&t));
 	attron(A_BLINK);
 	mvprintw(nrows-1,cm-15,"(c) Razvan Buhaianu - 313CC  ");
 	attroff(A_BLINK);
@@ -219,12 +216,6 @@ int new_game()
 				}
 			}
 		mvprintw(rm-3,cm+20,"Scor:%d",scor);
-	/************************************************
-	Printing the Time
-	************************************************/
-		time_t t;
-		time(&t);
-		mvprintw (nrows-3,cm-15,"%s",ctime(&t));
 		verif=verificare(mat);
 		if(verif==1)
 			{
@@ -331,9 +322,6 @@ int resume_game()
 			}
 			matant[i][j]=mat[i][j];
 		}
-	time_t t;
-	time(&t);
-	mvprintw (nrows-3,cm-15,"%s",ctime(&t));
 	attron(A_BLINK);
 	mvprintw(nrows-1,cm-15,"(c) Razvan Buhaianu - 313CC  ");
 	attroff(A_BLINK);
@@ -467,9 +455,6 @@ int resume_game()
 			}
 		}
 		mvprintw(rm-3,cm+20,"Scor:%d",scor);
-		time_t t;
-		time(&t);
-		mvprintw (nrows-3,cm-15,"%s",ctime(&t));
 		refresh();
 		verif=verificare(mat);
 		if(verif==1)
